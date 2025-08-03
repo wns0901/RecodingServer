@@ -7,6 +7,7 @@ import ListItemText from "@mui/material/ListItemText";
 import HomeIcon from "@mui/icons-material/Home";
 import VideocamIcon from "@mui/icons-material/Videocam";
 import SettingsIcon from "@mui/icons-material/Settings";
+import { Typography } from '@mui/material';
 
 // 사이드바의 너비를 상수로 정의하여 일관성 유지
 const drawerWidth = 240;
@@ -33,6 +34,17 @@ const Sidebar = () => {
       variant="permanent" // 항상 열려있는 영구적인 Drawer
       anchor="left" // 왼쪽에 위치
     >
+      <Typography
+        variant="h5" // 시각적 스타일은 h5처럼 보이게
+        component="h1" // 실제 렌더링될 HTML 태그는 h1 (SEO에 좋음)
+        sx={{
+          textAlign: "center",
+          padding: "16px 0", // 상하 여백을 주어 보기 좋게 만듭니다.
+          fontWeight: "bold", // 폰트 굵기 추가
+        }}
+      >
+        Chzzk Recode
+      </Typography>
       <List>
         {menuItems.map((item) => (
           // ListItemButton을 React Router의 Link 컴포넌트처럼 사용
